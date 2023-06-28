@@ -1,0 +1,22 @@
+doctype html
+html
+	body
+		nav(class='navbar navbar-expand-lg justify-content-between bg-dark navbar-dark')
+			span(class='navbar-brand mb-0 h1') VideoShare
+			button(class='navbar-toggler' type='button' data-toggle='collapse' data-target='#collapsibleNavbar')
+				span(class='navbar-toggler-icon')
+			div(class='collapse navbar-collapse' id='collapsibleNavbar')
+				ul(class='navbar-nav mr-auto')
+					li(class='nav-item active')
+						a(class='nav-link' href='dashboard') Home
+					li(class='nav-item')
+						a(class='nav-link' href='upload') Upload Video
+					li(class='nav-item dropdown')
+						a(class='nav-link dropdown-toggle' id='dropdown' role='button' data-toggle='dropdown') #{Display}
+						div(class='dropdown-menu')
+							a(class='dropdown-item' href='profile') Profile
+							a(class='dropdown-item' href='myVideo') Your Videos
+							a(class='dropdown-item' href='logout') Sign Out
+				form(class='form-inline' role='form' action='/dashboard' method='POST')
+					input(class='form-control mr-sm-2' type='search' name='search' placeholder='Search Video')
+					button(class='btn btn-light my-2 my-sm-0' type='submit') Search
